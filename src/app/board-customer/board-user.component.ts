@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { UserService } from '../_services/user.service';
+import { ProductService } from '../_services/product.service';
+import { IProduct } from './product';
+
 
 @Component({
   selector: 'app-board-user',
@@ -9,18 +11,22 @@ import { UserService } from '../_services/user.service';
 export class BoardUserComponent implements OnInit {
 
   content: string;
+  products : IProduct[];
 
-  constructor(private userService: UserService) { }
+  constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
-    this.userService.getUserBoard().subscribe(
+    this.productService.getUserBoard().subscribe(
       data => {
-        this.content = data;
+        this.products= data;
       },
       err => {
         this.content = JSON.parse(err.error).message;
       }
     );
+  }
+  addToCart():number{ 
+      return 0;
   }
 
 }

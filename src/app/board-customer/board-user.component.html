@@ -1,3 +1,9 @@
-<div>
-  <h6 class="text-muted py-5">{{ content }}</h6>
+
+<div [ngClass]="['product', 'collorText']">
+  <div *ngFor='let product of products'>
+     <img src='/assets/img/1.jpg'/>
+     <h4>{{product.productName}}</h4>
+     <h5>₹{{product.prize}}</h5>
+     <button (click)='addToCart($event)'>Add TO Cart</button>
+  </div>
 </div>
