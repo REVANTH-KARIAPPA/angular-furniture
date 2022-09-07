@@ -16,6 +16,7 @@ import { BoardUserComponent } from './board-customer/board-user.component';
 
 import { authInterceptorProviders } from './_helpers/auth.interceptor';
 import { CartComponent } from './cart/cart.component';
+import { OrderComponent } from './order/order.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { CartComponent } from './cart/cart.component';
     BoardAdminComponent,
     BoardModeratorComponent,
     BoardUserComponent,
-    CartComponent
+    CartComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,

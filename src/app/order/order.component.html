@@ -1,0 +1,19 @@
+<div >
+  <div *ngFor='let order of orders'>
+    <ul>
+
+     <h5>Order ID :{{order.orderId}}</h5>
+     <div *ngFor='let p of order.products'>
+     <li><h6>Product Name : {{p.productName}}</h6></li>
+      <li><h6>Prize = ₹{{p.prize}}</h6></li>
+
+
+   </div>
+     <h5>Order Total= ₹{{order.orderTotal}}</h5>
+
+    </ul>
+    <button (click)="cancleOrder(order.orderId)">Delete Order</button>
+  </div>
+
+  <!-- <button (click)='placeOrder(products)'>Place Order</button> -->
+</div>

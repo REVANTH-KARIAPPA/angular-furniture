@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../_services/product.service';
+import { TokenStorageService } from '../_services/token-storage.service';
 import { UserService } from '../_services/user.service';
+import { addProduct } from './addproduct';
 
 @Component({
   selector: 'app-board-moderator',
@@ -9,16 +12,31 @@ import { UserService } from '../_services/user.service';
 export class BoardModeratorComponent implements OnInit {
 
   content: string;
+  form: any = {};
+  isLoggedIn = false;
+  isLoginFailed = false;
+  errorMessage = '';
+  currentUser: any;
 
-  constructor(private userService: UserService) { }
+  constructor(private userService: UserService,
+              private productService: ProductService,
+              private token: TokenStorageService
+    ) { }
 
   ngOnInit(): void {
-    this.userService.getModeratorBoard().subscribe(
+     this.currentUser =  this.token.getUser();
+  }
+  onSubmit(){
+
+    this.productService.addProduct(this.form).subscribe(
       data => {
-        this.content = data;
+        console.log(data);
+        console.log(this.form);
+
       },
       err => {
-        this.content = JSON.parse(err.error).message;
+        this.errorMessage = err.error.message;
+
       }
     );
   }

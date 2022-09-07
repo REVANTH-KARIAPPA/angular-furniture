@@ -1,1 +1,14 @@
-<p>cart works!</p>
+<div >
+  <div *ngFor='let product of products'>
+    <ul>
+
+     <h4>{{product.productName}}</h4>
+     <h5>₹{{product.prize}}</h5>
+     <button (click)='delGet(product.productId)' >Delete Product</button>
+    </ul>
+  </div>
+  <!-- <h5>Cart Total= ₹{{getCartTotal()}}</h5> -->
+
+  <button (click)='orderPlaced(products)' [disabled]=''>Place Order</button>
+</div>
+
