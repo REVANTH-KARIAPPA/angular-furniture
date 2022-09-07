@@ -19,6 +19,7 @@ export class OrderComponent implements OnInit {
   orders:IOrder
   uId:number=0;
   content: any;
+  popup:boolean=false;
   ngOnInit(): void {
 
     this.currentUser =  this.token.getUser();

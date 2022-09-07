@@ -14,6 +14,7 @@ export class BoardUserComponent implements OnInit {
   content: string;
   products : IProduct[];
   currentUser: any;
+  popup:boolean=false;
 
   constructor(private productService: ProductService,private token: TokenStorageService) { }
 
@@ -40,6 +41,8 @@ export class BoardUserComponent implements OnInit {
 
       }
     );
+
+    this.popup = true
   }
 
 }

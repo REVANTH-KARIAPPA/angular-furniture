@@ -22,7 +22,7 @@ export class ProductService {
   }
 
   getUserBoard(): Observable<IProduct[]> {
-    return this.http.get<IProduct[]>(AppConstants.API_URL + 'product/all', httpOptions);
+    return this.http.get<IProduct[]>(AppConstants.API_URL + 'product/approved', httpOptions);
   }
 
   deleteProductFromCart(Pid:number,Cid :number): Observable<any> {
@@ -53,5 +53,18 @@ export class ProductService {
 
   placeOrder(products:IProduct[],uid:number): Observable<any> {
     return this.http.post<IProduct[]>(AppConstants.API_BASE_URL + 'order/'+uid+'/products',products, httpOptions);
+  }
+
+
+  getNotApprovedProducts(): Observable<IProduct[]> {
+    return this.http.get<IProduct[]>(AppConstants.API_URL + 'product/not-approved', httpOptions);
+  }
+
+  approveProduct(pId:number):Observable<any>{
+    return this.http.put(AppConstants.API_URL+'product/approve/'+pId,httpOptions);
+  }
+
+  deleteProduct(pId:number):Observable<any>{
+    return this.http.delete(AppConstants.API_URL+'product/'+pId,httpOptions);
   }
 }
