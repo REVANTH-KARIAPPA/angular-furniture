@@ -8,9 +8,12 @@ import { ProfileComponent } from './profile/profile.component';
 import { BoardUserComponent } from './board-customer/board-user.component';
 import { BoardModeratorComponent } from './board-seller/board-moderator.component';
 import { BoardAdminComponent } from './board-admin/board-admin.component';
+import { PaymentComponent } from './payment/payment.component';
+import { FooterComponent } from './footer/footer.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
+  { path: 'PaymentComponent', component: PaymentComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'profile', component: ProfileComponent },
@@ -22,6 +25,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
-  exports: [RouterModule]
+  exports: [RouterModule],
+  declarations: [FooterComponent]
 })
 export class AppRoutingModule { }
