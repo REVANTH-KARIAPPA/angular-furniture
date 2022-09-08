@@ -19,6 +19,8 @@ export class CartComponent implements OnInit {
   content:string='';
   cId:number=0;
   cartTotal:number=0;
+  popup: boolean=false;
+  demo:any;
    ngOnInit(): void {
 
         this.currentUser =  this.token.getUser();
@@ -27,7 +29,7 @@ export class CartComponent implements OnInit {
         this.fetchData();
 
   }
-  onDelete(pid:number):void{
+   onDelete(pid:number):void{
     this.productService.deleteProductFromCart(pid,this.cId).subscribe(
       ()=> {
       this.fetchData();
@@ -35,11 +37,12 @@ export class CartComponent implements OnInit {
   err => {
     this.content = JSON.parse(err.error).message;
   });
+  this.products = this.products.filter(item => item.productId != pid);
   }
 
    delGet(pid:number){
   this.onDelete(pid);
-   this.fetchData();
+
   }
   // getCartTotal():number{
   //   for(let p in this.products){
@@ -66,22 +69,20 @@ export class CartComponent implements OnInit {
   placeOrder(p:IProduct[]):void{
      this.productService.placeOrder(p,this.currentUser.id).subscribe(
       data => {
-
-        console.log(p)
-        console.log(p.length)
-
-
       },
       err => {
 
       }
     );
+    this.products=[];
 
   }
 
   orderPlaced(p:IProduct[]):void{
+
     this.placeOrder(p);
-    this.fetchData();
+    this.popup=true;
+    
   }
 
 }

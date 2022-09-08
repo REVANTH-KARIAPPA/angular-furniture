@@ -10,6 +10,7 @@ import { BoardModeratorComponent } from './board-seller/board-moderator.componen
 import { BoardAdminComponent } from './board-admin/board-admin.component';
 import { CartComponent } from './cart/cart.component';
 import { OrderComponent } from './order/order.component';
+import { PaymentComponent } from './payment/payment.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -20,6 +21,7 @@ const routes: Routes = [
   { path: 'mod', component: BoardModeratorComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'order',  component: OrderComponent},
+  { path: 'order/payment',  component: PaymentComponent},
   { path: 'cart', component: CartComponent },
   { path: 'admin', component: BoardAdminComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }

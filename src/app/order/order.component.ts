@@ -16,7 +16,7 @@ export class OrderComponent implements OnInit {
               private token: TokenStorageService,
               ) { }
   currentUser: any;
-  orders:IOrder
+  orders:IOrder;
   uId:number=0;
   content: any;
   popup:boolean=false;
@@ -34,7 +34,8 @@ canOrder(oId:number):void{
         this.content=  data;
 
       }
-    )
+    );
+    this.orders=null;
 }
 fetchOrder():void{
 
@@ -51,7 +52,7 @@ fetchOrder():void{
 }
 cancleOrder(oId:number):void{
   this.canOrder(oId);
-  this.fetchOrder();
+
 
 }
 
