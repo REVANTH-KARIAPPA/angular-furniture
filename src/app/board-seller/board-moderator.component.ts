@@ -17,6 +17,7 @@ export class BoardModeratorComponent implements OnInit {
   isLoginFailed = false;
   errorMessage = '';
   currentUser: any;
+  popup : boolean=false;
 
   constructor(private userService: UserService,
               private productService: ProductService,
@@ -39,6 +40,7 @@ export class BoardModeratorComponent implements OnInit {
 
       }
     );
+    this.popup=true;
   }
 
 }

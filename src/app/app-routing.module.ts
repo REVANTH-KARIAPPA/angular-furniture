@@ -21,7 +21,7 @@ const routes: Routes = [
   { path: 'mod', component: BoardModeratorComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'order',  component: OrderComponent},
-  { path: 'order/payment',  component: PaymentComponent},
+  { path: 'order/payment/:id',  component: PaymentComponent},
   { path: 'cart', component: CartComponent },
   { path: 'admin', component: BoardAdminComponent },
   { path: '', redirectTo: 'home', pathMatch: 'full' }
