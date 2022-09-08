@@ -13,7 +13,7 @@ import { FooterComponent } from './footer/footer.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'PaymentComponent', component: PaymentComponent },
+  { path: 'pay', component: PaymentComponent },
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'profile', component: ProfileComponent },

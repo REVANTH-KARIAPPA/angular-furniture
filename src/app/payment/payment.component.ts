@@ -8,7 +8,7 @@ declare var Razorpay:any;
   styleUrls: ['./payment.component.css']
 })
 export class PaymentComponent{
-  message: any = "Not yet stared";
+  message: any = "2000";
   paymentId = "";
   error = "";
   title = 'angular-razorpay-intergration';
@@ -28,7 +28,7 @@ export class PaymentComponent{
         }
       );
       window.dispatchEvent(event);
-      this.options.image=''
+      this.message=this.options.amount;
     },
     "prefill": {
       "name": "username",
@@ -46,10 +46,10 @@ export class PaymentComponent{
   paynow() :void{
     this.paymentId = '';
     this.error = '';
-    this.options.amount = "200"; //paise
+    this.options.amount = "200000"; //paise
     this.options.prefill.name = "manish";
     this.options.prefill.email = "manishraw098@gmail.com";
-    this.options.prefill.contact="2423342";   
+    this.options.prefill.contact="7249907835";   
     var rzp1 = new Razorpay(this.options);
     rzp1.open();
     rzp1.on('payment.failed', function (response: any) {
