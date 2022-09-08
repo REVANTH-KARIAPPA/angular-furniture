@@ -10,7 +10,6 @@ import { BoardModeratorComponent } from './board-seller/board-moderator.componen
 import { BoardAdminComponent } from './board-admin/board-admin.component';
 <<<<<<< HEAD
 import { PaymentComponent } from './payment/payment.component';
-import { FooterComponent } from './footer/footer.component';
 =======
 import { CartComponent } from './cart/cart.component';
 import { OrderComponent } from './order/order.component';
