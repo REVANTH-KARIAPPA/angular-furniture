@@ -13,7 +13,7 @@
 
     </ul>
     <button (click)="cancleOrder(order.orderId)">Delete Order</button>
-    <button class="nav-item" routerLink="payment" >Payment</button>
+    <button class="nav-item" [routerLink]="['payment',order.orderId]" >Payment</button>
   </div>
 
 
