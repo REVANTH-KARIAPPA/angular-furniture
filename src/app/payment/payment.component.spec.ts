@@ -9,6 +9,7 @@ describe('PaymentComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ PaymentComponent ]
+<<<<<<< HEAD
     }).compileComponents();
   });
 
@@ -29,5 +30,19 @@ describe('PaymentComponent', () => {
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
     expect(compiled.querySelector('.content span')?.textContent).toContain('my-paymentmodule app is running!');
+=======
+    })
+    .compileComponents();
+  });
+
+  beforeEach(() => {
+    fixture = TestBed.createComponent(PaymentComponent);
+    component = fixture.componentInstance;
+    fixture.detectChanges();
+  });
+
+  it('should create', () => {
+    expect(component).toBeTruthy();
+>>>>>>> 0ee6e8e61a044edc09b4cb2e1e8131305b0e4ae2
   });
 });

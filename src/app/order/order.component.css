@@ -1,19 +1,10 @@
-.product{
-  display: flex;
-  flex-flow: row wrap;
-  text-align: center;
-  font-weight: bold;
-
-}
-
-
 .overlay {
   position: fixed;
   top: 200px;
   bottom: 0;
   left: 0;
   right: 0;
-  
+  background: rgba(247, 242, 242, 0.7);
   transition: opacity 500ms;
 visibility: visible;
   opacity: 1;

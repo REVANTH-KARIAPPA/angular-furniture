@@ -1,12 +1,17 @@
+<<<<<<< HEAD
 import { Component, HostListener } from '@angular/core';
 
 declare var Razorpay:any;
+=======
+import { Component, OnInit } from '@angular/core';
+>>>>>>> 0ee6e8e61a044edc09b4cb2e1e8131305b0e4ae2
 
 @Component({
   selector: 'app-payment',
   templateUrl: './payment.component.html',
   styleUrls: ['./payment.component.css']
 })
+<<<<<<< HEAD
 export class PaymentComponent{
   message: any = "2000";
   paymentId = "";
@@ -70,4 +75,13 @@ export class PaymentComponent{
   onPaymentSuccess(event: any): void {
     this.message = "Success Payment";
   }
+=======
+export class PaymentComponent implements OnInit {
+
+  constructor() { }
+
+  ngOnInit(): void {
+  }
+
+>>>>>>> 0ee6e8e61a044edc09b4cb2e1e8131305b0e4ae2
 }
