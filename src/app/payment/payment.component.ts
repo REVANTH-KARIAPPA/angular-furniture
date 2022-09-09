@@ -70,7 +70,7 @@ export class PaymentComponent implements OnInit {
     this.currentUser = this.token.getUser();
     this.payment.email=this.currentUser.email;
     console.log("current user"+this.currentUser);
-    
+
   this.options.prefill.name = this.currentUser.username;
   this.options.prefill.contact="0000000000";
   this.options.prefill.email = this.currentUser.email;
@@ -94,7 +94,7 @@ export class PaymentComponent implements OnInit {
     );
   }
   sendPayment(): void {
-    this.productService.doPayment(this.orders.payment.paymentId, this.payment).subscribe(
+    this.productService.doPayment(this.orders.payment.paymentId,this.oid,this.payment).subscribe(
       data => {
 
         //  console.log("this is"+data);
@@ -109,6 +109,7 @@ export class PaymentComponent implements OnInit {
 
   paynow():void{
     this.sendPayment();
+    this.fetchOrderById();
 
 
     this.paymentId = '';

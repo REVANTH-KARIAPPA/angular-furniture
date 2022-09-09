@@ -16,7 +16,7 @@ export class OrderComponent implements OnInit {
               private token: TokenStorageService,
               ) { }
   currentUser: any;
-  orders:IOrder;
+  orders:IOrder[];
   uId:number=0;
   content: any;
   popup:boolean=false;
@@ -35,14 +35,15 @@ canOrder(oId:number):void{
 
       }
     );
-    this.orders=null;
+   this.orders=this.orders.filter(o=>o.orderId!=oId);
 }
 fetchOrder():void{
 
   this.productService.getOrder(this.uId).subscribe(
     data => {
       this.orders=data;
-      
+      console.log(data);
+
    },
     err => {
       this.content = JSON.parse(err.error).message;

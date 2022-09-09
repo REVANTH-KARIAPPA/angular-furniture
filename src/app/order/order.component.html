@@ -1,3 +1,7 @@
+<div>
+<h2 class="profile">Profile : </h2>
+<h5 class="profile ">Name : <strong>{{ currentUser.username }}</strong></h5>
+<h5 class="profile ">Email: <strong>{{ currentUser.email }}</strong></h5>
 <div class="container" *ngFor='let order of orders'>
 
   <table class="table">
@@ -14,9 +18,11 @@
       <td rowspan="10" style="text-align: right;">
         <br><div>Order Total= ₹{{order.orderTotal}}</div>
         <br><button class="dbutton" (click)="cancleOrder(order.orderId)">Delete</button>
-        <br><button class="nav-item pbutton" [routerLink]="['payment',order.orderId]">Payment</button>
+        <p class="green" *ngIf="order.status">Transation Completed</p>
+        <br><button class="nav-item pbutton" [routerLink]="['payment',order.orderId]"  *ngIf="!order.status">Payment</button>
       </td>
     </tr>
   </table>
 
+</div>
 </div>

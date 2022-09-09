@@ -4,6 +4,10 @@
   color: aliceblue;
   text-decoration-color: black;
 }
+.green{
+  color: green;
+  font-weight: bold;
+}
 .pbutton {
   background-color: #4CAF50; /* Green */
   border: none;
@@ -30,4 +34,9 @@
   width: 100px;
   height: 50px;
   margin: 10px;
+}
+.profile{
+  color: rgb(127, 183, 223);
+  text-shadow: #4CAF50;
+  text-decoration: #4CAF50;
 }

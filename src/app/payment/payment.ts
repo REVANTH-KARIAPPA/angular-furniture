@@ -1,6 +1,7 @@
 export interface IPayment{
-    paymentId:number;
-    paymentAmount: number;
-    method: string;
-    email: string;
-  }
+  paymentId:number;
+  paymentAmount: number;
+  method: string;
+  email: string;
+
+}

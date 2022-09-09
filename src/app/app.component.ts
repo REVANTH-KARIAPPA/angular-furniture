@@ -1,3 +1,4 @@
+import { LocationStrategy } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { TokenStorageService } from './_services/token-storage.service';
 
@@ -13,7 +14,13 @@ export class AppComponent implements OnInit {
   showModeratorBoard = false;
   username: string;
 
-  constructor(private tokenStorageService: TokenStorageService) { }
+  constructor(private tokenStorageService: TokenStorageService,
+              private location: LocationStrategy) {
+                history.pushState(null, null, window.location.href);
+                this.location.onPopState(() => {
+                  history.pushState(null, null, window.location.href);
+                }); 
+              }
 
   ngOnInit(): void {
     this.isLoggedIn = !!this.tokenStorageService.getToken();

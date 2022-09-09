@@ -5,6 +5,7 @@ export interface IOrder{
   orderId:number;
   orderTotal:number;
   payment:IPayment;
+  status:boolean,
   products: IProduct[];
 
 }
