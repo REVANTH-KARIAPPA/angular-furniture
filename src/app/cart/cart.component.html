@@ -1,21 +1,19 @@
-<div >
-  <h2>Cart</h2>
-  <div *ngFor='let product of products'>
-    <ul>
+<div class="card">
+  <h2 style="text-align:center; opacity: 0.7;">Cart</h2>
+  <table class="table">
+    <tr *ngFor='let product of products'>
+      <td>{{product.productName}} <br> ₹{{product.prize}}</td>
+      <td><button (click)='delGet(product.productId)'>Delete Product</button></td>
+    </tr>
+    <tr>
+      <td colspan = "2"><button (click)='orderPlaced(products)' [disabled]=''>Place Order</button></td>
+    </tr>
+  </table>
 
-     <h4>{{product.productName}}</h4>
-     <h5>₹{{product.prize}}</h5>
-     <button (click)='delGet(product.productId)' >Delete Product</button>
-    </ul>
-  </div>
-  <!-- <h5>Cart Total= ₹{{getCartTotal()}}</h5> -->
-
-  <button (click)='orderPlaced(products)' [disabled]=''>Place Order</button>
   <div class="overlay" *ngIf="popup">
     <div class="popup">
-        <h4>Order Placed</h4>
-        <a class="close" (click)="popup = false">&times;</a>
-
+      <h4>Order Placed</h4>
+      <a class="close" (click)="popup = false">&times;</a>
     </div>
-</div>
+  </div>
 </div>

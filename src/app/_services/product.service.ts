@@ -68,12 +68,12 @@ export class ProductService {
   deleteProduct(pId:number):Observable<any>{
     return this.http.delete(AppConstants.API_URL+'product/'+pId,httpOptions);
   }
+
   doPayment(paymentId:number,payment:IPayment):Observable<any>{
     return this.http.put(AppConstants.API_BASE_URL+'payment/'+paymentId,payment,httpOptions);
   }
   orderById(oId:number):Observable<any>{
     return this.http.get(AppConstants.API_BASE_URL+'order/id/'+oId,httpOptions);
   }
-  
 
 }

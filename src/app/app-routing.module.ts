@@ -8,13 +8,10 @@ import { ProfileComponent } from './profile/profile.component';
 import { BoardUserComponent } from './board-customer/board-user.component';
 import { BoardModeratorComponent } from './board-seller/board-moderator.component';
 import { BoardAdminComponent } from './board-admin/board-admin.component';
-<<<<<<< HEAD
-import { PaymentComponent } from './payment/payment.component';
-=======
 import { CartComponent } from './cart/cart.component';
 import { OrderComponent } from './order/order.component';
 import { PaymentComponent } from './payment/payment.component';
->>>>>>> 0ee6e8e61a044edc09b4cb2e1e8131305b0e4ae2
+
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -35,6 +32,6 @@ const routes: Routes = [
 @NgModule({
   imports: [RouterModule.forRoot(routes, { relativeLinkResolution: 'legacy' })],
   exports: [RouterModule],
-  declarations: [FooterComponent]
+  declarations: []
 })
 export class AppRoutingModule { }

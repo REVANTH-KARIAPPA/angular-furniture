@@ -16,12 +16,12 @@ import { BoardUserComponent } from './board-customer/board-user.component';
 
 import { authInterceptorProviders } from './_helpers/auth.interceptor';
 import { CartComponent } from './cart/cart.component';
-<<<<<<< HEAD
+
 import { FooterComponent } from './footer/footer.component';
-=======
+
 import { OrderComponent } from './order/order.component';
 import { PaymentComponent } from './payment/payment.component';
->>>>>>> 0ee6e8e61a044edc09b4cb2e1e8131305b0e4ae2
+
 
 @NgModule({
   declarations: [

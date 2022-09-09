@@ -1,20 +1,9 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
 <div class="paymentmodule border_gradient">
-<h1>Furniture</h1><br><br><br>
-<h3>your total </h3><br><br>
-<h5>{{message}}</h5><br/>
-<button (click)="paynow()">pay now</button>
-</div>
-=======
-<p>payment works!</p>
->>>>>>> 0ee6e8e61a044edc09b4cb2e1e8131305b0e4ae2
-=======
-<div class="paymentmodule border_gradient">
-<h1>Furniture</h1><br>
-<h3>your total = ₹{{this.payment.paymentAmount}}</h3>
-<h3> {{message}}</h3><br><br>
-<h5></h5><br/>
-<button (click)="paynow()">pay now</button>
-</div>
->>>>>>> c9131deb67dfa45fe92346b259c823000c33ab4a
+    <h1>Furniture</h1><br><br><br>
+    <h4>Payment ID: {{this.orders.payment.paymentId}}</h4>
+    <h3>your total </h3><br><br>
+    <h5>₹{{payment.paymentAmount}}</h5><br/>
+    <h4>{{message}}</h4>
+    <button (click)="paynow()">pay now</button>
+    </div>
+  

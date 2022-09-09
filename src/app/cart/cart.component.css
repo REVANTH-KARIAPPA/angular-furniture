@@ -14,7 +14,7 @@ visibility: visible;
 .popup {
   margin: 70px auto;
   padding: 20px;
-  background: rgb(139, 227, 218);
+  background: rgb(85, 134, 169);
   border-radius: 5px;
   width: 30%;
   position: relative;
@@ -37,7 +37,7 @@ visibility: visible;
   color: #333;
 }
 .popup .close:hover {
-  color: #06D85F;
+  color: rgb(85, 134, 169);
   cursor: pointer;
 }
 .popup .content {
@@ -50,4 +50,14 @@ visibility: visible;
   .popup{
     width: 70%;
   }
+}
+
+.table{
+  text-align: center;
+}
+.card{
+  background-color: rgb(85, 134, 169);
+}
+.button{
+  padding: auto;
 }

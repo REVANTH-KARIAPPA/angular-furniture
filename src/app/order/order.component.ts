@@ -42,7 +42,7 @@ fetchOrder():void{
   this.productService.getOrder(this.uId).subscribe(
     data => {
       this.orders=data;
-     // console.log(data);
+      
    },
     err => {
       this.content = JSON.parse(err.error).message;
