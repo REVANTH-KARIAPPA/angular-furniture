@@ -3,4 +3,5 @@ export interface IPayment{
   paymentAmount: number;
   method: string;
   email: string;
+
 }

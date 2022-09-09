@@ -4,6 +4,7 @@
   <h3>your total </h3><br><br>
   <h5>₹{{payment.paymentAmount}}</h5><br/>
   <h4>{{message}}</h4>
+  <p *ngIf="orders.status">Payment successful</p>
   <button (click)="paynow()">pay now</button>
   </div>
 
