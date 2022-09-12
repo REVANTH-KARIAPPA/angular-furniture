@@ -11,7 +11,7 @@ declare var Razorpay: any;
   templateUrl: './payment.component.html',
   styleUrls: ['./payment.component.css']
 })
-export class PaymentComponent implements OnInit {
+export class PaymentComponent {
   oid: number;
   currentUser: any;
   orders: IOrder;
@@ -22,7 +22,9 @@ export class PaymentComponent implements OnInit {
     email: "",
   };
   content: string;
-  message: any="not yet started";
+  
+  popup: boolean=false;
+  message:any = "not yet started";
 
   paymentId = "";
   error = "";
@@ -35,7 +37,7 @@ export class PaymentComponent implements OnInit {
     "image": "/assets/img/furnitures.png",
     "order_id": "",
     "handler": function (response: any) {
-      var event = new CustomEvent("payment.successful",
+      var event = new CustomEvent("payment.success",
         {
           detail: response,
           bubbles: true,
@@ -97,7 +99,7 @@ export class PaymentComponent implements OnInit {
     this.productService.doPayment(this.orders.payment.paymentId, this.payment).subscribe(
       data => {
 
-        //  console.log("this is"+data);
+         console.log("this is",data);
       },
       err => {
         this.content = JSON.parse(err.error).message;
@@ -105,12 +107,13 @@ export class PaymentComponent implements OnInit {
     );
 
   }
+  delay(ms: number) {
+    return new Promise( resolve => setTimeout(resolve, ms) );
+}
 
 
   paynow():void{
     this.sendPayment();
-
-
     this.paymentId = '';
     this.error = '';
     var rzp1 = new Razorpay(this.options);
@@ -125,13 +128,14 @@ export class PaymentComponent implements OnInit {
       console.log(response.error.reason);
       console.log(response.error.metadata.order_id);
       console.log(response.error.metadata.payment_id);
-      this.error = response.error.reason;
+      // this.error = response.error.reason;
     }
-    );
+    )
   }
   @HostListener('window:payment.success', ['$event'])
   onPaymentSuccess(event: any): void {
     this.message = "Success Payment";
+    this.popup= true;
   }
 
 }

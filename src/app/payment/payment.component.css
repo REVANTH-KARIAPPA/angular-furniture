@@ -23,6 +23,49 @@
 .h5{
   color: aliceblue;
 }
+
+.overlay {
+  position: fixed;
+  top: 200px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+ 
+  transition: opacity 500ms;
+visibility: visible;
+  opacity: 1;
+}
+
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: rgb(184, 219, 246);
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+
+  opacity: 0.7;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: rgb(0, 0, 0);
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+
+  .popup{
+    width: 70%;
+  }
+}
+
 /* .border_gradient {
   border: 8px light rgb(17, 89, 137);
   -moz-border-bottom-colors:#897048 #917953 #a18a66 #b6a488 #c5b59b #d4c5ae #e2d6c4 #eae1d2;

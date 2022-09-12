@@ -1,11 +1,10 @@
 
-<div [ngClass]="['product']">
-  <div *ngFor='let product of products'>
+<div class="card" [ngClass]="['product']">
+  <td class="innercard" *ngFor='let product of products'>
      <img [src]='product.img'/>
      <h5>{{product.productName}}</h5>
      <h6>₹{{product.prize}}</h6>
      <button type="button" (click)='addToCart(product.productId)'>Add TO Cart</button>
-
      <div class="overlay" *ngIf="popup">
          <div class="popup">
              <h3>Added To
@@ -14,5 +13,5 @@
 
          </div>
      </div>
-  </div>
+    </td>
 </div>

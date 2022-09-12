@@ -1,5 +1,5 @@
 .product{
-  display: flex;
+  display: contents;
   flex-flow: row wrap;
   text-align: center;
   font-weight: bold;
@@ -59,4 +59,17 @@ visibility: visible;
   .popup{
     width: 70%;
   }
+}
+.card{ text-align: center;
+  margin: auto;
+  padding: 20px;
+  background-color: rgb(85, 134, 169);
+  align-content:space-between;
+  align-items: center;
+}
+.innercard{
+  padding: 20px;
+  margin: 5px;
+  background-color: rgb(79, 106, 125);
+  align-items:center;
 }
