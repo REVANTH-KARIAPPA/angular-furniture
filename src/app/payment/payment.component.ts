@@ -87,7 +87,7 @@ export class PaymentComponent {
         this.orders = data;
         this.payment.paymentAmount=this.orders.orderTotal;
         this.payment.paymentId=this.orders.payment.paymentId;
-        // console.log(data);
+        console.log(data);
         this.options.amount=(this.orders.orderTotal * 100).toString();
        },
       err => {
@@ -114,12 +114,7 @@ export class PaymentComponent {
 
   paynow():void{
     this.sendPayment();
-<<<<<<< HEAD
-=======
     this.fetchOrderById();
-
-
->>>>>>> ea11631bc2ccf9d0a89978cc534d2f2c7304824f
     this.paymentId = '';
     this.error = '';
     var rzp1 = new Razorpay(this.options);
