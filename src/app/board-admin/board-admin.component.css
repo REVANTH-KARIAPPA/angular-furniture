@@ -1,0 +1,35 @@
+.product{
+    display:contents;
+    flex-flow: row wrap;
+    text-align: center;
+    font-weight: bold;  
+  }
+  
+  
+  .popup h2 {
+    margin-top: 0;
+    color: rgb(0, 0, 0);
+    font-family: Tahoma, Arial, sans-serif;
+  }
+  
+  
+  
+  
+  
+  .card{ text-align: center;
+    background-color: rgb(84, 99, 112);
+    height:fit-content;
+    margin: auto;
+    border-radius: 3px;
+    padding: 20px;
+    background-color: rgb(85, 134, 169);
+    align-content:space-between;
+    align-items: center;
+  }
+  .innercard{
+    border-radius: 5px;
+    padding: 20px;
+    margin: 50px;
+    background-color: rgb(79, 106, 125);
+    align-items:center;
+  }
