@@ -1,20 +1,9 @@
 <div class="paymentmodule border_gradient">
     <h1>Furniture</h1><br><br><br>
-    <h4>Payment ID: {{this.orders.payment.paymentId}}</h4><br>
-    <h4 >{{this.message}}</h4>
-    <h3>your total </h3><br>
+    <h4>Payment ID: {{this.orders.payment.paymentId}}</h4>
+    <h3>your total </h3><br><br>
     <h5>₹{{payment.paymentAmount}}</h5><br/>
-
+    <h4>{{message}}</h4>
     <button (click)="paynow()">pay now</button>
-
-
-    <div class="overlay" *ngIf="popup">
-        <div class="popup">
-          <h4>payment Sucess full<br>
-            email sent to {{this.options.prefill.email}}
-          </h4>
-        </div>
     </div>
-
-</div>
   

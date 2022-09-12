@@ -3,6 +3,7 @@
     background-color: rgb(84, 99, 112);
     height:fit-content;
     padding-top: 20px;
+<<<<<<< HEAD
     background-size:cover;
 } */
 * {
@@ -119,3 +120,8 @@
     }
   }
   
+=======
+    
+    background-size:cover;
+}
+>>>>>>> ea11631bc2ccf9d0a89978cc534d2f2c7304824f

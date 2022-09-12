@@ -72,7 +72,7 @@ export class PaymentComponent {
     this.currentUser = this.token.getUser();
     this.payment.email=this.currentUser.email;
     console.log("current user"+this.currentUser);
-    
+
   this.options.prefill.name = this.currentUser.username;
   this.options.prefill.contact="0000000000";
   this.options.prefill.email = this.currentUser.email;
@@ -96,7 +96,7 @@ export class PaymentComponent {
     );
   }
   sendPayment(): void {
-    this.productService.doPayment(this.orders.payment.paymentId, this.payment).subscribe(
+    this.productService.doPayment(this.orders.payment.paymentId,this.oid,this.payment).subscribe(
       data => {
 
          console.log("this is",data);
@@ -114,6 +114,12 @@ export class PaymentComponent {
 
   paynow():void{
     this.sendPayment();
+<<<<<<< HEAD
+=======
+    this.fetchOrderById();
+
+
+>>>>>>> ea11631bc2ccf9d0a89978cc534d2f2c7304824f
     this.paymentId = '';
     this.error = '';
     var rzp1 = new Razorpay(this.options);

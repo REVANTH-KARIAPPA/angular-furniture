@@ -3,6 +3,7 @@
   flex-flow: row wrap;
   text-align: center;
   font-weight: bold;
+  padding: 5px;
 
 }
 
@@ -13,7 +14,7 @@
   bottom: 0;
   left: 0;
   right: 0;
-  
+
   transition: opacity 500ms;
 visibility: visible;
   opacity: 1;

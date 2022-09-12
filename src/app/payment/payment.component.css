@@ -1,5 +1,5 @@
 .paymentmodule{
-    background-color: rgb(85, 134, 169);
+    background-color: rgb(198, 217, 231);
     opacity: 0.7;
 
     height: auto;
@@ -10,6 +10,11 @@
   border: 300px light rgb(17, 89, 137);
   padding: 50px;
   text-align: center;
+}
+.succes{
+   color: green;
+   font-weight: bold;
+
 }
 .h1{
   color: aliceblue;
